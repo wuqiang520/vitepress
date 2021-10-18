@@ -32,11 +32,11 @@ module.exports = {
     //   侧边导航
     sidebar: [{
         text: 'vitepress安装及配置',
-        link: '/mine/'
+        link: '/vitepress/'
       },
       {
-        text: 'doc1',
-        link: '/doc1/'
+        text: '打卡服务安装及部署',
+        link: '/clock/'
       }
     ]
   }

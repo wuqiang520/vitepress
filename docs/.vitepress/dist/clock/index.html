@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>背景 | 我的文档</title>
+    <meta name="description" content="我的vitepress博客.">
+    <link rel="stylesheet" href="/assets/style.d82f6ee1.css">
+    <link rel="modulepreload" href="/assets/Home.43cf027b.js">
+    <link rel="modulepreload" href="/assets/app.f2e4692b.js">
+    <link rel="modulepreload" href="/assets/clock_index.md.92b0bda0.lean.js">
+    <link rel="modulepreload" href="/assets/app.f2e4692b.js">
+    <link rel="icon" href="/img/zhs.jpg">
+    <meta name="twitter:title" content="背景 | 我的文档">
+    <meta property="og:title" content="背景 | 我的文档">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="我的文档, back to home" data-v-675d8756 data-v-4a583abe><!----> 我的文档</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>指南 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>指南 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><a class="sidebar-link-item" href="/vitepress/">vitepress安装及配置</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item active" href="/clock/">打卡服务安装及部署</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#背景">背景</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#内网穿透">内网穿透</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#服务器安装及配置frp">服务器安装及配置frp</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#客户端安装及配置frp">客户端安装及配置frp</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#nssm将客户端frp注册为服务">NSSM将客户端frp注册为服务</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#安装及运行node项目">安装及运行node项目</a><!----></li></ul></li></ul></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h2 id="背景" tabindex="-1">背景 <a class="header-anchor" href="#背景" aria-hidden="true">#</a></h2><p>xx公司打卡提供一个接口，传入手机号、时间戳和门禁id即可，由于接口部署在公司内网。先有两种方案可行。 一、vpn拨号， 二、内网穿透。 这里主要记录方案二操作步骤。</p><h2 id="内网穿透" tabindex="-1">内网穿透 <a class="header-anchor" href="#内网穿透" aria-hidden="true">#</a></h2><h3 id="服务器安装及配置frp" tabindex="-1">服务器安装及配置frp <a class="header-anchor" href="#服务器安装及配置frp" aria-hidden="true">#</a></h3><p>1.下载frp</p><div class="language-sh line-numbers-mode"><pre><code>  //下载地址是:   https://github.com/fatedier/frp/releases
+  
+  //下载的版本是 0.26.0
+  
+  frp文件名称: frp_0.26.0_linux_386.tar.gz
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>2.上传frp到目标服务器</p><p>3.解压到当前路径</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token function">tar</span> -zxvf frp_0.26.0_linux_386.tar.gz
+  <span class="token builtin class-name">cd</span> /usr/local/usr/frp_0.26.0_linux_386/
+  // 这里会发现有frpc、frpc.ini和frps、frps.ini 四个文件
+  // 其中frpc frpc.ini 是客户端的相关文件
+  // 其中frps frps.ini 是服务端的相关文件
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>4.配置服务端 4.1编辑frps.ini文件</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token punctuation">[</span>common<span class="token punctuation">]</span>
+  bind_port <span class="token operator">=</span> <span class="token number">39010</span> //frp程序占用端口
+  vhost_http_port <span class="token operator">=</span> <span class="token number">39011</span> //http访问时暴露端口
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>4.2 启动frps(普通启动)</p><div class="language-sh line-numbers-mode"><pre><code>  // 启动命令
+  ./frps -c ./frps.ini
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>4.3 启动frps(pm2后台启动)</p><p>4.3.1 <a href="http://xn--frp-tu9du7ltij79ejuata679mbf9b.sh" target="_blank" rel="noopener noreferrer">当前目录创建文件frp.sh</a>，并写入内容</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token comment">#! /bin/bash</span>
+  ./frps -c frps.ini
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>4.3.2 启动</p><div class="language-shell line-numbers-mode"><pre><code>  pm2 start ./frp.sh --name frps
+  // 没有pm2则先安装， <span class="token function">npm</span> <span class="token function">install</span> pm2 -g
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="客户端安装及配置frp" tabindex="-1">客户端安装及配置frp <a class="header-anchor" href="#客户端安装及配置frp" aria-hidden="true">#</a></h3><p>1.下载frp</p><p>2.编辑frpc.ini文件</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token punctuation">[</span>common<span class="token punctuation">]</span>
+  server_addr <span class="token operator">=</span> <span class="token number">120.25</span>.27.70 //填写公网ip
+  server_port <span class="token operator">=</span> <span class="token number">39010</span> //服务器frps占用端口
+
+  <span class="token punctuation">[</span>web<span class="token punctuation">]</span>
+  <span class="token builtin class-name">type</span> <span class="token operator">=</span> http
+  local_port <span class="token operator">=</span> <span class="token number">8099</span> //本地服务端口
+  custom_domains <span class="token operator">=</span> aginx.cn //填服务器域名
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>3.客户端启动</p><div class="language-shell line-numbers-mode"><pre><code>  ./frpc.exe
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="nssm将客户端frp注册为服务" tabindex="-1">NSSM将客户端frp注册为服务 <a class="header-anchor" href="#nssm将客户端frp注册为服务" aria-hidden="true">#</a></h3><p>为了方便frp在win10启动，可以设置为服务，让其后台自启。</p><p>首先下载nssm，官网链接:<a href="https://nssm.cc/download" target="_blank" rel="noopener noreferrer">https://nssm.cc/download</a></p><p>NSSM是一个服务封装程序，它可以将普通exe程序封装成服务，使之像windows服务一样运行。同类型的工具还有微软自己的srvany，不过nssm更加简单易用，并且功能强大。</p><p>服务安装使用如下命令</p><div class="language-bash line-numbers-mode"><pre><code>  ./nssm.exe <span class="token function">install</span> frpc
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="/assets/nees.10001c4a.png" alt="&#39;ness&#39;"></p><p>执行此命令后，会出现一个界面，基本上看着就知道怎么用了，大多数情况下，只需要填第一个界面的程序路径就可以了。</p><p>服务管理主要有启动、停止和重启，其命令如下：</p><p>启动服务：nssm start frpc</p><p>停止服务：nssm stop frpc</p><p>重启服务：nssm restart frpc</p><p>也可以在资源管理器/服务下手动开启或关闭 <img src="/assets/nees1.c2478385.png" alt="&#39;ness&#39;"></p><h3 id="安装及运行node项目" tabindex="-1">安装及运行node项目 <a class="header-anchor" href="#安装及运行node项目" aria-hidden="true">#</a></h3><div class="language-bash line-numbers-mode"><pre><code>  <span class="token function">git</span> clone https://github.com/wuqiang520/punchClock.git
+  <span class="token function">npm</span> <span class="token function">install</span>
+  <span class="token function">npm</span> run build
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>测试，访问外网地址能成功访问到内网服务 <img src="/assets/nees2.b876292f.png" alt="&#39;ness&#39;"></p></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/vitepress/" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>vitepress安装及配置</span></a></div><div class="next" data-v-38ede35f><!----></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"about_index.md\":\"68c5d594\",\"clock_index.md\":\"92b0bda0\",\"index.md\":\"82e293d3\",\"vitepress_index.md\":\"34de4c1b\"}")</script>
+    <script type="module" async src="/assets/app.f2e4692b.js"></script>
+    
+  </body>
+</html>

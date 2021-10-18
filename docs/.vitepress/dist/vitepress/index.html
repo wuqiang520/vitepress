@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>安装过程 | 我的文档</title>
+    <meta name="description" content="我的vitepress博客.">
+    <link rel="stylesheet" href="/assets/style.d82f6ee1.css">
+    <link rel="modulepreload" href="/assets/Home.43cf027b.js">
+    <link rel="modulepreload" href="/assets/app.f2e4692b.js">
+    <link rel="modulepreload" href="/assets/vitepress_index.md.34de4c1b.lean.js">
+    <link rel="modulepreload" href="/assets/app.f2e4692b.js">
+    <link rel="icon" href="/img/zhs.jpg">
+    <meta name="twitter:title" content="安装过程 | 我的文档">
+    <meta property="og:title" content="安装过程 | 我的文档">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="我的文档, back to home" data-v-675d8756 data-v-4a583abe><!----> 我的文档</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>指南 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/" data-v-b8818f8c>指南 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/about/" data-v-b8818f8c>关于 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><a class="sidebar-link-item active" href="/vitepress/">vitepress安装及配置</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#安装过程">安装过程</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#简单配置">简单配置</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="/clock/">打卡服务安装及部署</a><!----></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h2 id="安装过程" tabindex="-1">安装过程 <a class="header-anchor" href="#安装过程" aria-hidden="true">#</a></h2><p>1.首先是创建目录</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token function">mkdir</span> vitepress-program
+  <span class="token builtin class-name">cd</span> vitepress-program
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>2.初始化package.json，并安装vitepress</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token function">npm</span> init
+  <span class="token function">npm</span> i -D vitepress
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>3.添加脚本</p><div class="language-json line-numbers-mode"><pre><code>  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vitepress dev docs --open&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vitepress build docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;serve&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vitepress serve docs&quot;</span>
+  <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>4.更目录下创建 docs 文件夹，并创建一个md文件</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token function">mkdir</span> docs
+  <span class="token builtin class-name">echo</span> <span class="token string">&#39;# Hello World&#39;</span> <span class="token operator">&gt;</span> docs/index.md
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>5.启动项目</p><div class="language-shell line-numbers-mode"><pre><code>  <span class="token function">npm</span> run dev
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="简单配置" tabindex="-1">简单配置 <a class="header-anchor" href="#简单配置" aria-hidden="true">#</a></h2><p>可以配置侧边栏和导航栏。在docs中新建一个.vitepress文件夹，里面创建一个config.js文件</p><div class="language-js line-numbers-mode"><pre><code>  <span class="token comment">// vitepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">&quot;wuq&#39;s Blog&quot;</span><span class="token punctuation">,</span><span class="token comment">// 网站标题</span>
+    description<span class="token operator">:</span> <span class="token string">&#39;我的vitepress博客.&#39;</span><span class="token punctuation">,</span> <span class="token comment">//网站描述</span>
+    base<span class="token operator">:</span> <span class="token string">&#39;/&#39;</span><span class="token punctuation">,</span> <span class="token comment">//  部署时的路径 默认 /  可以使用二级地址 /base/</span>
+    <span class="token comment">// lang: &#39;en-US&#39;, //语言</span>
+    repo<span class="token operator">:</span> <span class="token string">&#39;vuejs/vitepress&#39;</span><span class="token punctuation">,</span>
+    head<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 改变title的图标</span>
+        <span class="token punctuation">[</span>
+            <span class="token string">&#39;link&#39;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                rel<span class="token operator">:</span> <span class="token string">&#39;icon&#39;</span><span class="token punctuation">,</span>
+                href<span class="token operator">:</span> <span class="token string">&#39;/img/linktolink.png&#39;</span><span class="token punctuation">,</span><span class="token comment">//图片放在public文件夹下</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">// 主题配置</span>
+    themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">//   头部导航</span>
+        nav<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&#39;首页&#39;</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">&#39;/&#39;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&#39;关于&#39;</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">&#39;/about/&#39;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">//   侧边导航</span>
+        sidebar<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&#39;我的&#39;</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">&#39;/mine/&#39;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><!----></div><div class="next" data-v-38ede35f><a class="link" href="/clock/" data-v-38ede35f><span class="text" data-v-38ede35f>打卡服务安装及部署</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-38ede35f><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"about_index.md\":\"68c5d594\",\"clock_index.md\":\"92b0bda0\",\"index.md\":\"82e293d3\",\"vitepress_index.md\":\"34de4c1b\"}")</script>
+    <script type="module" async src="/assets/app.f2e4692b.js"></script>
+    
+  </body>
+</html>

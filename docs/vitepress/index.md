@@ -11,7 +11,7 @@
   npm i -D vitepress
 ```
 3.添加脚本
-```js
+```json
   "scripts": {
     "dev": "vitepress dev docs --open",
     "build": "vitepress build docs",
